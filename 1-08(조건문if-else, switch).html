@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>조건문(if-else, switch)</title>
+</head>
+<body>
+    <script>
+        // var age = 13;
+        // if(age>18){
+        //     console.log("당신은 성인입니다.");
+        // }
+
+        // var age = 17;
+        // if(age > 18) {
+        //     console.log("당신은 성인입니다.");
+        // }
+        // else {
+        //     console.log("당신은 성인이 아닙니다.");
+        // }
+        
+        // // if-else if, else if, else
+        // var hour = 14;
+        // if(hour < 10) {
+        //     console.log("Good Morning");
+        // }
+        // else if(hour < 17) {
+        //     console.log("Good Afternoon");
+        // }
+        // else if(hour < 21) {
+        //     console.log("Good Evening");
+        // }
+        // else{
+        //     console.log("Good Night");
+        // }
+
+        // var age = 17;
+        // var isAdult = false;
+
+        // if(age > 18) {
+        //     isAdult = true;
+        // }
+        // console.log(isAdult);
+
+        // swtich : 정수, break, default
+        var d = new Date();
+        var day = d.getDay();       // 일요일 : 0, 월요일 : 1, 화요일 : 2 .... 토요일 : 6
+        console.log(day);
+        var dayName = "";
+
+        switch(day) {               // day : 정수
+            case 0:
+                dayName = "일요일";
+                break;
+            case 1:
+                dayName = "월요일";
+                break;
+            case 2:
+                dayName = "화요일";
+                break;
+            case 3:
+                dayName = "수요일";
+                break;
+            case 4:
+                dayName = "목요일";
+                break;
+            case 5:
+                dayName = "금요일";
+                break;
+             case 6:
+                dayName = "토요일";
+                break;
+            default:                // else와 같음 (없어도 에러는 안남)
+                break;
+        }
+        console.log("오늘은 "+dayName+"입니다.");
+        // switch문을 if문으로 변환
+
+
+    </script>
+</body>
+</html>
