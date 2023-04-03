@@ -1,0 +1,23 @@
+! <html>
+<head>
+    <title>입력 받은 세 수중 최소값을 출력</title>
+</head>
+<body>
+    <script>
+        function solution(a, b, c){
+            let answer;
+            
+            // insert Code
+            if(a<b) answer = a;
+            else answer = b;
+            
+            if(c<answer) answer = c;
+
+            return answer;
+        }
+
+        console.log(solution(6, 5, 11)); // 출력값 : 5
+
+    </script>
+</body>
+</html>

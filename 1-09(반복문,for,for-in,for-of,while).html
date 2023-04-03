@@ -1,0 +1,94 @@
+!<html>
+<head>
+    <title>반복문(for, for-in, for-of, while)</title>
+</head>
+<body>
+    <script>
+        // for문
+        // for(var i = 0; i < 5; i++){
+        //     console.log("The Number is "+i);
+        // }
+
+        // for문 밖으로 뺌
+        // var i = 1;
+        // var total = 0;
+        // for(;i <= 10;){
+        //     //console.log("Test");
+        //     total += i;
+        //     i++
+        // }
+        // console.log("총 합은 = "+total);
+        
+        // break문, continue문
+        // for(var i = 1; i <= 5; i++){
+        //     // if(i == 3) break;
+        //     if(i == 3) continue;
+        //     console.log("The Number is "+i);
+        // }
+
+        // var numbers = [43, 23, 5, 7, 99, 12, 19];
+        // var len = numbers.length;
+        // // console.log(len);
+        // for(var  i = 0; i < len; i++){
+        //     console.log(numbers[i]);
+        // }
+        
+        // 향상된 for문
+        // var numbers = [43, 23, 5, 7, 99, 12, 19];
+        // for(var i in numbers){
+        //     // console.log(i);
+        //     console.log(numbers[i]);
+        // }
+
+        // var numbers = [43, 23, 5, 7, 99, 12, 19];
+        // for(var i of numbers){
+        //     console.log(i);
+        // }
+
+        // var person = {
+        //     firstName : "길동",
+        //     lastName : "홍",
+        //     age : 37
+        // };
+
+        // console.log(person.firstName);
+        // console.log(person.lastName);
+        // console.log(person.age);
+
+        // for(var key in person){
+        //     // console.log(key);
+        //     console.log(person[key]);
+        // }
+            
+        // var cars = ["현대", "기아", "볼보", "벤츠"];
+        // for(var car in cars) {
+        //     console.log(car);
+        // }
+
+        // for(var car of cars) {
+        //     console.log(car);
+        // }
+
+        // while : zero or more
+        
+        // var i = 1;
+        // var total = 0;
+        // while(i <= 100){
+        //     total += i;
+        //     i++;
+        // }
+        // console.log(total);
+
+        // do-while : one or more
+
+        var i = 1;
+        var total = 0;
+        do {
+            total += i;
+            i++;
+        } while(i <= 10);
+        console.log(total);
+        
+    </script>
+</body>
+</html>
