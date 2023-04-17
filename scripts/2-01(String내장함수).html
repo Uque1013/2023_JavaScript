@@ -1,0 +1,112 @@
+!<html>
+<head>
+    <title>String 내장 함수</title>
+</head>
+<body>
+    <script>
+        // var txt = "ABCDEFGHIJKLMN";
+        // console.log(txt.length);
+
+        // indexOf | 첫 번째 단어값의 위치 값을 알려줌 같은 단어가 여러개여도 맨 앞에거만 알려줌
+        // var str = "Please locate where 'locate'";
+        // console.log(str.indexOf("locate"));
+        // console.log(str.indexOf("choi"));   // 출력값 : -1 리턴
+        // if(str.indexOf("locate") > -1){
+        //     console.log("locate 문자 발견");
+        // }
+        // console.log(str.lastIndexOf("locate"));
+
+        // search | search는 lastsearch같은게 없다.
+        // var str = "Please locate where 'locate'";
+        // console.log(str.search("locate"));
+
+        // slice | (인덱스, 인덱스-1) 7, 13이라고 써도 12로 받아들임 | -는 맨 뒤에서부터 인덱스를 셈
+        // var str = "Apple, Banana, Kiwi";
+        // console.log(str.slice(7, 13));    // 출력값 : Banana
+        // console.log(str.slice(7));        // 출력값 : Banana, Kiwi  
+        // console.log(str.slice(-12, -6));
+        // console.log(str.slice(-2));
+
+        // substring | (인덱스, 인덱스-1) slice랑 동일
+        // var str = "Apple, Banana, Kiwi"; 
+        // console.log(str.substring(7, 13));  // 출력값 : Banana
+
+        // substr
+        // console.log(str.substr(7, 6));   // 출력값 : Banana
+
+        // var jumin1 = "070828";
+        // console.log(jumin1.substr(0, 2));
+        // console.log(jumin1.substr(2, 2));
+        // console.log(jumin1.substr(4, 2));
+
+        // var jumin2 = "2007-08-28";
+        // console.log(jumin2.substring(0, jumin2.indexOf("-")));
+
+        // replace 
+        // var str1 = "Please visit here";
+        // var str2 = str1.replace("here", "there");
+        // console.log(str2);
+
+        // 이렇게하면 하나만 바뀜
+        // var str3 = "Please visit here here here";
+        // var str4 = str3.replace("here", "there");
+        // console.log(str4);
+
+        // var str5 = "Please visit here here here";
+        // // 아래 정규포현처럼 쓰면 합격 바로 가능.
+        // var str6 = str5.replace(/here/g, "there"); // g : global(=전체)을 의미
+        // console.log(str6);
+
+        // var str7 = "Please visit HERE Here HeRe";
+        // var str8 = str7.replace(/here/i, "there"); // i : ignore 대소문자를 무시
+        // console.log(str8);
+
+        // toUpperCase : 모두 대문자로
+        // var str8 = "Please visit HERE Here HeRe";
+        // console.log(str8.toUpperCase());
+
+        // // toLowCase : 모두 소문자로
+        // var str9 = "Please visit HERE Here HeRe";
+        // console.log(str9.toLowerCase());
+        
+        // 데이터베이스에서 john 검색
+        // "John", "JOHN", "john"
+
+        // var txt1 = "Hello";
+        // var txt2 = "World";
+        // var txt3 = txt1 + " "+ txt2;
+        // console.log(txt3);
+
+        // console.log(txt1.concat(" ", txt2));
+
+        // var str10 = "                     Hello             World           ";
+        // console.log(str10);
+        // console.log(str10.trim());
+
+        // padStart
+        // var str11 = "15";
+        // console.log(str11.padStart(8, 0));
+
+        // 특정 자릿수를 통일하기 위해서 사용 : 예) 날짜를 두자릿수로 동일
+        // var str12 = "13";
+        // console.log(str12.padStart(2,0));
+        
+        // padEnd
+        // var str12 = "13";
+        // console.log(str12.padEnd(4, 0));
+
+        // charAt
+        // var str13 = "Hello World";
+        // console.log(str13.charAt(7));
+
+        // split
+        var tags = "키보드, 기계식, 블루투스";
+        var arr1 = tags.split(", ");
+        console.log(arr1);
+
+        var birthday = "2007-08-28";
+        var arr2 = birthday.split("-");
+        console.log(arr2);
+    </script>
+</body>
+</html>
