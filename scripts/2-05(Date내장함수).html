@@ -1,0 +1,72 @@
+!<html>
+<head>
+    <title>Date 내장함수</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+</head>
+<body>
+    <script>
+        // var d1 = new Date();
+        // console.log(d1);
+
+        // 특정 날짜 및 시간을 직접 지정
+        //  var d2 = new Date(2023, 11, 15,13, 30)
+        //  console.log(d2);
+        //  console.log(d2.getMonth);
+    
+        // var mouth = ["Jan", "Feb", "Mar"];
+        // var mon= 3;
+
+
+        // var d3 = new Date();
+        // console.log(d3);
+
+        // var year = d3.getFullYear;
+        // console.log("year "+year);
+
+        // var month = d3.getMonth();
+        // console.log("month "+(month+1));
+
+        // var date = d3.getDate();
+        // console.log("date "+date);
+
+        // var day = d3.getDay();
+        // console.log("day"+ day);  // 일요일 0 , 월요일 1, 화요일 2  --------- 토요일 6
+    
+        // var hour = d3.getHours();
+        // var minute = d3.getMinutes();
+        // var second = d3.getSeconds();
+        // console.log(hour, minute, second);
+
+        // 글로벌 서비스일 경우에는 접속한 국가의 타임존을 고려
+        // 2023.4.24 14:25(한국)
+        // 글제목, 작성자, 작성일 : 
+        // 2023.4.24 05:24 (영국)
+
+        // var d4 = new Date();
+        // console.log("timezone ", d4.getTimezoneOffset()); // 출력값(분단위) : -540 --> 9시간
+
+        // 특정 날짜와 시간을 직접 지정할 수 있음.
+        // var d5 = new Date();
+        // d5.setFullYear(2007);
+        // d5.setMonth(7);
+        // d5.setDate(28);
+        // console.log(d5);
+
+        // 실무에서는 moment.js 라이브러리를 활용
+        var d6 = new Date();
+        console.log(d6);
+        console.log(moment().format("YYYY-MM-DD"));
+        console.log(moment().format("MMM DD, YYYY"));
+
+        // 오늘을 기준으로 일주일전을 검색
+        console.log(moment().subtract(7, "days").format("MMM DD, YYYY"));
+
+        // 오늘을 기준으로 일주일후를 검색
+        console.log(moment().add(7, "days").format("MMM DD, YYYY"));
+
+        // 오늘을 기준으로 4시간 후를 검색
+        console.log(moment().add(4, "hours").format("YYYY-MM-DD HH"));
+
+    </script>
+</body>
+</html>
