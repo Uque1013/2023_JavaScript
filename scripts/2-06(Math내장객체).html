@@ -52,7 +52,25 @@
         console.log(Math.min(0, 150, 23, 45, -28, 77));
 
         // random()
+        // var x1 = Math.random(); //0이상 1미만의 임의의 난수를 발생 
+        // console.log(x1);
+        // 1에서 6 사이의 임의의 랜덤 숫자
+        // var x2 = Math.trunc(Math.random()*6)+1;
+        // console.log(x2);
 
+        // var x3 = Math.floor(Math.random()*6)+1;
+        // console.log(x3);
+
+        // console.log("("+x2+", "+x3+")");
+
+        // 임의의 정수를 생성해주는 함수
+        function getRenInteger(min, max){
+            return Math.floor(Math.random() * (21)) + 50;
+        }
+
+        // min = 1, max = 6
+        // min = 50, max = 70
+        console.log(getRenInteger(50, 70));
 
     </script>
 </body>
