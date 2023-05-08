@@ -38,9 +38,19 @@
         // }, 3000)
 
         // setInterval
-        setInterval(function(){
-            console.log("임지현 바보멍청이똥개티비~~~ㅎ하흐항ㅎ")
-        }, 1000)
+        // setInterval(function(){
+        //     console.log("임지현 바보멍청이똥개티비~~~ㅎ하흐항ㅎ"+i);
+        //     i++
+        // }, 1000)
+
+        var i = 0;
+        var fnc = setInterval(function(){
+            console.log("1초 마다 프로그램 호출 : "+i);
+            if(i===5){
+                clearInterval(fnc);
+            }
+            i++;
+        })
     </script>
 </body>
 </html>
