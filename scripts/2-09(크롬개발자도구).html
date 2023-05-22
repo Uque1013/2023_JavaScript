@@ -18,11 +18,20 @@
         // console.log(userList);
         // console.table(userList);
 
-        console.time();
-        for(let x = 1; x <= 100000; x++){
-            console.log(x);
+        // console.time();
+        // for(let x = 1; x <= 100000; x++){
+        //     console.log(x);
+        // }
+        // console.timeEnd();
+
+        function test(){
+            console.time();
+            // code
+            console.timeEnd();
         }
-        console.timeEnd();
+
+        // 출력값에 style을 직접 지정할 수 있음.
+        console.log("This is %cstyle message", "color:yellow;background-color:blue;padding:4px");
     </script>
 </body>
 </html>
