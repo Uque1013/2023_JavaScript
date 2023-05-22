@@ -1,0 +1,47 @@
+!<html>
+<head>
+    <title>this 키워드</title>
+</head>
+<body>
+    <button onclick="this.style.backgroundColor='red'"">클릭1</button>
+    <button onclick="callFunc(this)">클릭2</button>
+    <select onchange="changeSelect(this)">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    
+    <script>
+        function changeSelect(obj2) {
+            console.log(obj2);
+            console.log(obj2.value);
+        }
+
+        function callFunc(obj1) {
+            console.log(obj1);
+        }
+       // console.log(this);
+       // alter("규정이 화났어~");
+
+        // function fullName(){
+
+        // }
+
+    //    var person = {
+    //     firstName : "길동",
+    //     lastName : "홍",
+    //     fullName : function(){
+    //         return person.firstName+" "+ person.lastName;
+    //     }
+    //    }
+
+    //    console.log(person.fullName());
+
+    // function myFunction(){
+    //     console.log(this);
+    // }
+
+    // myFunction();
+    </script>
+</body>
+</html>
