@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Default Function Parameter</title>
+</head>
+<body>
+    <script>
+        // function say1(message){
+        //     console.log(message);
+        // }
+        // say1("안녕하세용?");
+        // say1();
+
+        // function say2(message){
+        //     if(message != undefined){
+        //         console.log(message);
+        //     }
+        //     else {
+        //         console.log("매개변수가 없습니다.");
+        //     }
+        // } // say2();
+        // say2("안녕하세용?");
+
+        // function plus1(a, b){
+        //     console.log(a+b); 
+        // }
+        // plus1(1,2);
+        // plus1(1);
+
+        // function plus2(a=0, b=0){
+        //     console.log(a+b);
+
+        // }
+        // plus2(1,2);
+        // plus2(1);   // b값이 없어도 자동으로 b에 넣어준 0이 들어감
+        // plus2();    // a, b 값이 모두 없어도 default parameter가 있어서 0이 출력됨
+
+        function say3(message="매개변수가 없습니다."){
+            console.log(message);
+        }
+        say3("안녕하세용?");
+        say3();
+    </script>
+</body>
+</html>
