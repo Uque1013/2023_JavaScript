@@ -1,0 +1,25 @@
+!<html>
+<head>
+    <title>문자 찾기</title>
+</head>
+<body>
+    <script>
+        function solution(s, t){
+
+            // 방법 1 : for문을 이용
+            // let answer = 0;
+            // for(let x of s){
+            //     // console.log(x);
+            //     if(x === t) answer++;
+            // }
+
+            // 방법 2 : 내장함수 이용
+            // let answer = s.split(t).length;     // answer = 4;
+            console.log(s.split(t));
+            return(answer-1);
+        }
+        let str = "COMPUTERPROGRAMMING";
+        console.log(solution(str,"R"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+!<html>
+<head>
+    <title>A를 #으로</title>
+</head>
+<body>
+    <script>
+        function solution (s){
+            let answer="";
+
+            // 방법 1
+            // for(let x of s){
+            //     //console.log(x);
+            //     if(x === 'A') answer += "#";
+            //     else answer += x;
+            // } 
+
+            // 방법2 : replace()와 정규표현식을 사용
+            answer = s.replace(/A/ig, '#');
+
+            return answer;
+        }
+        let str = "BANANA";
+        console.log(solution(str));
+    </script>
+</body>
+</html>

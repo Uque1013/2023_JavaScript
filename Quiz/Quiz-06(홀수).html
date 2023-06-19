@@ -1,0 +1,27 @@
+!<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution (arr){
+            let answer = [];
+            let total = 0, min = Number.MAX_SAFE_INTEGER;
+
+            for(let x of arr){
+                if(x % 2 == 1){
+                    total += 1; 
+                    if(x < min)
+                        min = x;
+                }
+            }
+            answer.push(total);
+            answer.push(min);
+            return answer;
+        }
+
+        let arr = [12, 77, 38, 41, 53, 92, 85];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
