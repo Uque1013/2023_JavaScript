@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Object Literal Syntax Extension</title>
+</head>
+<body>
+    <script>
+        var firstName = "길동";
+        var lastName = "홍";
+
+        // var person = {
+        //     firstName : "길동",
+        //     lastName : "홍"
+        // }
+
+        // var person = {
+        //     firstName : firstName,
+        //     lastName : lastName
+        // }
+        
+        // console.log(person);
+
+        // object의 key 값을 동적으로 할당
+        var type1 = "student";
+        var score = {
+            [type1] : "홍",
+            point : 95
+        }
+        console.log(score);
+
+        // score.grade = 1;
+        // console.log(score);
+
+        var type2 = "grade";
+        score.[type2] = 1;
+        console.log(score);
+    </script>
+</body>
+</html>
