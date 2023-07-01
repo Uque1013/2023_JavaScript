@@ -5,13 +5,20 @@
 <body>
     <script>
         function solution (n){
-            let answer;
+            let answer = 0;
 
             // insert Code
 
-            for(let i = 1; i <= n; i++){
+            // for(let i = 1; i <= n; i++){
+            //     answer += i;
+            // }  
+
+            // for문 밖으로 뺀 방식
+            let i = 1;
+            for(; i <= n;){
                 answer += i;
-            }  
+                i++;
+            }
 
             return answer;
         }
