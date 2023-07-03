@@ -7,12 +7,17 @@
         // var txt = "ABCDEFGHIJKLMN";
         // console.log(txt.length);
 
+        var str = "Hong Gil Dong";
+        //var replace_str = str.replace("Hong", "Go");
+        var replace_str = str.replace(/Hong/g, 'Go');
+        console.log(replace_str);
+
         // indexOf | 첫 번째 단어값의 위치 값을 알려줌 같은 단어가 여러개여도 맨 앞에거만 알려줌
         // var str = "Please locate where 'locate'";
         // console.log(str.indexOf("locate"));
         // console.log(str.indexOf("choi"));   // 출력값 : -1 리턴
         // if(str.indexOf("locate") > -1){
-        //     console.log("locate 문자 발견");
+        //     console.log("locate 문자 발견"); 
         // }
         // console.log(str.lastIndexOf("locate"));
 
