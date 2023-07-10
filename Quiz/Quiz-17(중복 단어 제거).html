@@ -1,0 +1,32 @@
+!<html>
+<head>
+    <title>중복 단어 제거</title>
+</head>
+<body>
+    <script>
+        function solution(str){
+            let answer = [];
+
+            // 내가 푼 방법
+            // for(let i = 0; i < str.length; i++){
+            //     if(i === str.indexOf(str[i]))
+            //         answer += str[i]+"  ";
+            // }
+
+            // answer = str.filter(function(v, i){
+                // console.log(v, i, str.indexOf(v));
+                // if(str.indexOf(v) == i){
+                //     return true;
+                // }
+            //     return str.indexOf(v) === i;
+            // });
+
+            // arrow function 사용
+            answer = str.filter((v, i) => str.indexOf(v) === i);
+            return answer;
+        }
+        let str = ["good", "time", "good", "time", "student"];
+        console.log(solution(str));
+    </script>
+</body>
+</html>
