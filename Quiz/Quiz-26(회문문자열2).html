@@ -1,0 +1,28 @@
+!<html>
+<head>
+    <title>회문 문자열2</title>
+</head>
+<body>
+    <script>
+        function solution(str){
+            let answer = "YES";
+            str = str.toLowerCase().replace(/[^a-z]/g, ''); // 정규표현식
+
+            // 방법1: 직접 비교
+            // let len = str.length;
+            // for (let i=0; i<Math.floor(len/2); i++){
+            //     if (str[i] !== str[len-i-1]) 
+            //         return answer = "NO";
+            // }
+
+            // 방법2 : reverse() 함수 사용
+            if(str!==str.split('').reverse().join('')) answer = "NO";
+            
+            return answer;
+        }
+
+        let str = "Found777, TimE^& StudY, Yduts; emit, 999DnuoF";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
