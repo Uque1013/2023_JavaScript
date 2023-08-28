@@ -1,0 +1,35 @@
+!<html>
+<head>
+    <title>숫자만 추출</title>
+</head>
+<body>
+    <script>
+        function solution(str){
+            let answer="";
+
+            // 방법 1 : parseInt() 함수 사용
+            for(let x of str) {
+                if(!isNaN(x)) {
+                    console.log(x);
+                    answer += x;
+                }
+            }
+            return parseInt(x);
+
+            // 방법 2 : parseInt() 사용 금지
+            for(let x of str){
+                if(!isNaN(x)){
+                    answer = (answer * 10) + Number(x);
+                }
+            }
+
+            // 방법 3 : 정규표현식 사용
+            // answer = Number(str.replace(/[^0-9]/g,'')); // 정규 표현식
+            
+            return answer;
+        }
+        let str = "gOen2T0s8eSoft";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
