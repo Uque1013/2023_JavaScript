@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>정규 표현식(Regular Expression)</title>
+</head>
+<body>
+    <script>
+        // var patt = /World/ig;   // World : 패턴, ig:modifier
+        // var str1 = "Hello World";
+        // console.log(str1.search("World"));
+        // console.log(str1.search(/World/i)); // i : 대소문자를 구분하지 않음
+
+        // var str2 = "Hello WORLD! world";
+        // console.log(str2.replace("World", "Kim")); // 안 바뀜
+        // console.log(str2.replace(/World/i, "Kim")); // 앞에 WORLD만 바뀜
+        // console.log(str2.replace(/World/ig, "Kim")); // 둘 다 바뀜 | g : global
+
+        // var str3 = "Is this all there is";
+        // var patt1 = /[hat]/g;
+        // var result1 = str3.match(patt1);
+        // console.log(result1);
+    
+        // [0-9] : 0~9 사이의 모든 숫자를 찾음
+        // var str4 = "123abcdd4523kk";
+        // var patt2 = /[0-9]/g;
+        // var result2 = str4.match(patt2);
+        // console.log(result1);
+
+        // var str5 = "re, green, red, gree, gen, red, blue, yellow";
+        // var patt3 = /(red|green)/g;
+        // var result3 = str5.match(patt3);
+        // console.log(result3);
+
+        // \d: 숫자 [0-9]
+        // var str6 = "Please Call 119 Hurry up";
+        // var patt4 = /\d/g;
+        // var result4 = str6.match(patt4);
+        // console.log(result4);
+
+        // \s : 공백 (s = space의 약자)
+        // var str7 = "Please Call 119 Hurry up";
+        // var patt5 = /\s/g;
+        // var result5 = str7.match(patt5);
+        // console.log(result5); 
+
+        // var str8 = "HELLO, LOOK AT ME!";
+        // // var patt6 = /LO/g;      // 출력값 : 3, 단어 중간에 LO가 들어가는 단어를 포함해서 search
+        // var patt6 = /\bLO/g;       // 출력값 : 7, LO로 시작하는 단어를 찾음
+        // var result6 = str8.search(patt6);
+        // console.log(result6);
+
+        // n+ : n이 최소한 1개 이상(one or more)
+        // var str9 = "HellooOo";
+        // var patt7 = /o+/g;
+        // console.log(str9.match(patt7));
+
+        // n* : n이 zero or more
+        // var str10 = "HellooOo World";
+        // var patt8 = /lo*/g; // 앞에 쓴거는 무조건 있어야하고 2번째부터는 유무상관없음
+        // console.log(str10.match(patt8));
+
+        // n? : n이 zero or one
+        // var str11 = "1, 100 choi23 1000";
+        // var patt9 = /10?/g; 
+        // console.log(str11.match(patt9));
+    </script>
+</body>
+</html>
