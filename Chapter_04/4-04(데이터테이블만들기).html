@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>데이터테이블 만들기</title>
+</head>
+<body>
+    <input type="text" id="searchTxt">
+    <input type="button" value="조회" onclick="doSearch()">
+
+    <table id="tb" border="1">
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Address</td>
+        </tr>
+    </table>
+
+    <script src="/Chapter_04/4-04.user_data.js"></script>
+    <script>
+        // var currentData = [] ;
+        // console.log(userList);       // 출력값 확인
+        function doSearch() {
+            // alert("조회 버튼 클릭");
+            var search_txt = document.getElementById("searchTxt").value;
+            // console.log(search_txt);
+
+            if(search_txt==="") {   // 전체 데이터를 출력
+                // console.log(userList);
+                renderTable(userList);
+            }
+            else {                  // 사용자가 입력한 키워드에 해당하는 데이터만 출력
+                // /pattern/gi
+                var regExp = new RegExp(search_txt, "i");
+                var data = userList.filter(item => {
+                    if(regExp.test(item.name)) {
+                        return true;
+                    }
+                    else if(regExp.test(item.email)) {
+                        return true;
+                    }
+                    else if(regExp.test(item.phone)) {
+                        return true;
+                    }
+                    else if(regExp.test(item.address)) {
+                        return true;
+                    }
+                })
+            }
+
+            function renderTable() {
+                var h = [];
+                data.forEach(item => {
+                    h.push('<tr>');
+                        h.push('<td>${item.name}/<td>');
+                        h.push('<td>${item.email}/<td>');
+                        h.push('<td>${item.phone}/<td>');
+                        h.push('<td>${item.address}/<td>');
+                    h.push('/<tr>');
+                });
+
+                // console.log(h.join(""))
+                document.querySelector("#tb>tbody").innerHTML = h.join("");
+            }
+        }
+    </script>
+</body>
+</html>
