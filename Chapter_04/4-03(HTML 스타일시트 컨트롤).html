@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>HTML 스타일시트 컨트롤</title>
+    <style>
+        .border-red {
+            border: 2px dashed red;
+        }
+
+        .border-green {
+            border: 2px solid green;
+        }
+
+        .border-default {
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+Text :
+<br>
+<input type="text" id="text1" onblur="changeBorder()">
+<br>
+<br>
+<input type="radio" name="radio_email_yn" value="Y" onclick="showEmail()">동의
+<input type="radio" name="radio_email_yn" value="N" checked onclick="hideEmail()">거부
+<div id="divEmail" style="display: none">이메일<input type="text" id="email"></div>
+<br>
+<select id="select1">
+    <option value="">서울</option>
+    <option value="">대구</option>
+    <option value="">부산</option>
+</select>
+
+<br>
+<input type="button" value="저장" onclick="doSave()">
+
+    <script>
+        function showEmail(){
+            document.getElementById("divEmail").style.display="";
+        }
+
+        function hideEmail(){
+            document.getElementById("divEmail").style.display="";
+        }
+
+        function doSave() {
+            var txt1 = document.getElementById("text1");
+            if(txt1.value === "")
+                text1.className = "border-red";
+                return alert("필수값을 입력해주세요.");
+        }
+
+        function changeBorder() {
+            var txt1 = document.getElementById("text1");
+            //console.log(txt1.value);
+            if(txt1.value === "red")
+                text1.className = "border-red";
+            else if(txt1.value === "green")
+                text1.className = "border-green"
+            else 
+                text1.className = "border-default"
+        }
+    </script>
+</body>
+</html>
