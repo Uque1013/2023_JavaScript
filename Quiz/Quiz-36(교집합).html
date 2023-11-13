@@ -6,10 +6,21 @@
     <script>
         function solution(arr1, arr2){
             let answer=[];
+            let p1 = p2 = 0;
             arr1.sort((a,b) => a - b);
 
-            for(let x of arr1){
-                if(arr2.includes(x)) answer.push(x);
+            // 1. 내장함수 사용
+            // for(let x of arr1){
+            //     if(arr2.includes(x)) answer.push(x);
+            // }
+
+            while(p1<arr1.length && p2<arr2.length) {
+                if(arr1[p1] === arr2[p2]) {
+                    answer.push(arr1[p1++])
+                    p2++;
+                }
+                else if(arr1[p1]<arr2[p2]) p1++;
+                else p2++;
             }
 
             return answer;
